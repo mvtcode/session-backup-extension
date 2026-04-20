@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Backup</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="app-header">
+        <div class="header-main">
+          <h1 data-i18n="extName">Session Backup</h1>
+          <div class="header-right">
+            <button
+              id="lang-toggle"
+              class="lang-toggle-btn"
+              aria-label="Switch language"
+            >
+              <span id="current-lang">VI</span>
+            </button>
+            <button
+              id="theme-toggle"
+              class="theme-toggle-btn"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="sun-icon"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg
+                class="moon-icon"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="display: none"
+              >
+                <path
+                  d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                ></path>
+              </svg>
+            </button>
+            <span id="app-version" class="version-tag"></span>
+          </div>
+        </div>
+        <div class="site-info">
+          <span class="label" data-i18n="currentSite">Trang hiện tại</span>:
+          <span id="current-domain" class="value">...</span>
+        </div>
+      </header>
+
+      <nav class="tabs">
+        <button class="tab-btn active" data-tab="backup" data-i18n="tabBackup">
+          Sao lưu
+        </button>
+        <button class="tab-btn" data-tab="restore" data-i18n="tabRestore">
+          Phục hồi
+        </button>
+      </nav>
+
+      <main class="tab-content">
+        <!-- Backup Tab -->
+        <section id="backup-pane" class="pane active">
+          <div class="card">
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" id="check-cookies" checked />
+                <label for="check-cookies" data-i18n="labelCookies"
+                  >Cookies</label
+                >
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="check-ls" checked />
+                <label for="check-ls" data-i18n="labelLocalStorage"
+                  >Local Storage</label
+                >
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="check-ss" checked />
+                <label for="check-ss" data-i18n="labelSessionStorage"
+                  >Session Storage</label
+                >
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="check-idb" checked />
+                <label for="check-idb" data-i18n="labelIndexedDB"
+                  >IndexedDB</label
+                >
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="check-cache" checked />
+                <label for="check-cache" data-i18n="labelCacheStorage"
+                  >Cache Storage</label
+                >
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="backup-password" data-i18n="labelEncrypt"
+                >Mã hóa với mật khẩu (Tùy chọn)</label
+              >
+              <input
+                type="password"
+                id="backup-password"
+                data-i18n-placeholder="placeholderBackupPassword"
+              />
+            </div>
+
+            <button id="btn-backup" class="btn btn-primary">
+              <span data-i18n="btnBackup">Sao lưu ngay</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Restore Tab -->
+        <section id="restore-pane" class="pane">
+          <div class="card">
+            <div class="input-group">
+              <label for="restore-file" data-i18n="labelSelectFile"
+                >Chọn file backup (.json)</label
+              >
+              <div class="file-input-wrapper">
+                <input type="file" id="restore-file" accept=".json" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="restore-password" data-i18n="labelRestorePassword"
+                >Mật khẩu (Nếu có mã hóa)</label
+              >
+              <input
+                type="password"
+                id="restore-password"
+                data-i18n-placeholder="placeholderRestorePassword"
+                disabled
+              />
+            </div>
+
+            <div class="checkbox-group single-col">
+              <div class="checkbox-item">
+                <input type="checkbox" id="check-refresh" />
+                <label for="check-refresh" data-i18n="labelRefresh"
+                  >Tự động tải lại trang sau khi phục hồi</label
+                >
+              </div>
+            </div>
+
+            <button id="btn-restore" class="btn btn-primary" disabled>
+              <span data-i18n="btnRestore">Phục hồi dữ liệu</span>
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <div class="author-info contact-links">
+          <span data-i18n="author">Tác giả:</span
+          ><strong><a href="https://github.com/mvtcode">Mạc Tân</a></strong>
+        </div>
+        <div class="contact-links">
+          <span
+            >Email:
+            <a href="mailto:macvantan@gmail.com">macvantan@gmail.com</a></span
+          >
+          <span class="separator">|</span>
+          <span
+            >FB:
+            <a href="https://www.facebook.com/mvt.hp.star">Mạc Tân</a></span
+          >
+        </div>
+      </footer>
+
+      <div id="status" class="status-msg">
+        <span id="status-text"></span>
+        <button id="close-status" class="close-btn">&times;</button>
+      </div>
+    </div>
+    <script type="module" src="main.ts"></script>
+  </body>
+</html>

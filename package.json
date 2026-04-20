@@ -1,0 +1,50 @@
+{
+  "name": "session-backup-extension",
+  "version": "0.0.1",
+  "description": "Chrome extension to backup and restore session data (Cookies, LocalStorage, SessionStorage, IndexedDB, Cache Storage)",
+  "keywords": [
+    "backup-restore",
+    "browser-extension",
+    "chrome-extension",
+    "cookies",
+    "encryption",
+    "indexeddb",
+    "localstorage",
+    "privacy",
+    "session-backup",
+    "session-restore"
+  ],
+  "homepage": "https://github.com/mvtcode/session-backup-extension#readme",
+  "bugs": {
+    "url": "https://github.com/mvtcode/session-backup-extension/issues"
+  },
+  "license": "Apache-2.0",
+  "author": "mvtcode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mvtcode/session-backup-extension.git"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check .",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "lucide-static": "^0.479.0"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.31",
+    "@types/chrome": "^0.1.40",
+    "husky": "^9.1.7",
+    "oxfmt": "^0.45.0",
+    "oxlint": "^1.60.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.1"
+  }
+}

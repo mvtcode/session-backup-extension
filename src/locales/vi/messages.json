@@ -1,0 +1,94 @@
+{
+  "extName": {
+    "message": "Session Backup"
+  },
+  "extDescription": {
+    "message": "Sao lưu và phục hồi dữ liệu phiên làm việc (Cookies, LocalStorage, SessionStorage)"
+  },
+  "tabBackup": {
+    "message": "Sao lưu"
+  },
+  "tabRestore": {
+    "message": "Phục hồi"
+  },
+  "labelCookies": {
+    "message": "Cookies"
+  },
+  "labelLocalStorage": {
+    "message": "Local Storage"
+  },
+  "labelSessionStorage": {
+    "message": "Session Storage"
+  },
+  "labelIndexedDB": {
+    "message": "IndexedDB"
+  },
+  "labelCacheStorage": {
+    "message": "Cache Storage"
+  },
+  "labelEncrypt": {
+    "message": "Mã hóa với mật khẩu (Tùy chọn)"
+  },
+  "placeholderBackupPassword": {
+    "message": "Để trống nếu không mã hóa"
+  },
+  "btnBackup": {
+    "message": "Sao lưu ngay"
+  },
+  "labelSelectFile": {
+    "message": "Chọn file backup (.json)"
+  },
+  "labelRestorePassword": {
+    "message": "Mật khẩu (Nếu có mã hóa)"
+  },
+  "placeholderRestorePassword": {
+    "message": "Nhập mật khẩu"
+  },
+  "labelRefresh": {
+    "message": "Tự động tải lại trang sau khi phục hồi"
+  },
+  "btnRestore": {
+    "message": "Phục hồi dữ liệu"
+  },
+  "msgBackupSuccess": {
+    "message": "Sao lưu thành công!"
+  },
+  "msgRestoreSuccess": {
+    "message": "Khôi phục thành công!"
+  },
+  "msgRefreshing": {
+    "message": "Đang tải lại trang..."
+  },
+  "msgNoFile": {
+    "message": "Vui lòng chọn file"
+  },
+  "msgEncryptedFile": {
+    "message": "File đã mã hóa. Cần nhập mật khẩu."
+  },
+  "msgIncorrectPassword": {
+    "message": "Mật khẩu không đúng hoặc file bị lỗi"
+  },
+  "msgNoActiveTab": {
+    "message": "Không tìm thấy tab đang hoạt động"
+  },
+  "author": {
+    "message": "Tác giả"
+  },
+  "version": {
+    "message": "Phiên bản"
+  },
+  "currentSite": {
+    "message": "Domain hiện tại"
+  },
+  "msgDomainMismatch": {
+    "message": "Cảnh báo: File này thuộc về $1. Có thể không tương thích!",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "msgConfirmRestore": {
+    "message": "Domain không khớp. Bạn vẫn muốn tiếp tục phục hồi?"
+  }
+}

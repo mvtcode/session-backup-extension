@@ -1,0 +1,94 @@
+{
+  "extName": {
+    "message": "Session Backup"
+  },
+  "extDescription": {
+    "message": "Backup and restore session data (Cookies, LocalStorage, SessionStorage)"
+  },
+  "tabBackup": {
+    "message": "Backup"
+  },
+  "tabRestore": {
+    "message": "Restore"
+  },
+  "labelCookies": {
+    "message": "Cookies"
+  },
+  "labelLocalStorage": {
+    "message": "Local Storage"
+  },
+  "labelSessionStorage": {
+    "message": "Session Storage"
+  },
+  "labelIndexedDB": {
+    "message": "IndexedDB"
+  },
+  "labelCacheStorage": {
+    "message": "Cache Storage"
+  },
+  "labelEncrypt": {
+    "message": "Encrypt with Password (Optional)"
+  },
+  "placeholderBackupPassword": {
+    "message": "Leave empty for no encryption"
+  },
+  "btnBackup": {
+    "message": "Backup Now"
+  },
+  "labelSelectFile": {
+    "message": "Select backup file (.json)"
+  },
+  "labelRestorePassword": {
+    "message": "Password (If encrypted)"
+  },
+  "placeholderRestorePassword": {
+    "message": "Enter password"
+  },
+  "labelRefresh": {
+    "message": "Refresh page after restore"
+  },
+  "btnRestore": {
+    "message": "Restore Data"
+  },
+  "msgBackupSuccess": {
+    "message": "Backup successful!"
+  },
+  "msgRestoreSuccess": {
+    "message": "Restore successful!"
+  },
+  "msgRefreshing": {
+    "message": "Refreshing page..."
+  },
+  "msgNoFile": {
+    "message": "Please select a file"
+  },
+  "msgEncryptedFile": {
+    "message": "This file is encrypted. Please enter password."
+  },
+  "msgIncorrectPassword": {
+    "message": "Incorrect password or corrupted file"
+  },
+  "msgNoActiveTab": {
+    "message": "No active tab found"
+  },
+  "author": {
+    "message": "Author"
+  },
+  "version": {
+    "message": "Version"
+  },
+  "currentSite": {
+    "message": "Current Domain"
+  },
+  "msgDomainMismatch": {
+    "message": "Warning: This file belongs to $1. May be incompatible!",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "msgConfirmRestore": {
+    "message": "Domain mismatch. Do you still want to restore?"
+  }
+}
